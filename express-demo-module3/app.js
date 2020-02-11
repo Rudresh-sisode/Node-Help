@@ -25,4 +25,5 @@ app.get('/getMovies',(req,res)=>{
     var movies=JSON.parse(data).movies
     console.log(movies)
     res.json(movies[0].name)
+    
 })
