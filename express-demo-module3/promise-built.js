@@ -4,6 +4,9 @@ mongoclient.connect(url,(err,db)=>{
 
 
 })
+/*
+[also check promises with all method module 3 slide no: 44]
+*/
 
 //using promises
 mongoclient.connect(url).then((err,db)=>{
