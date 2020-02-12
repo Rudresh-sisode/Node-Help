@@ -1,0 +1,13 @@
+{
+    "students":[
+        {
+            "name":"robert","course":"BS computer"
+        },
+        {
+            "name":"soham ","course":"IT Computer"
+        },
+        {
+            "name":"Rudresh","course":"BCA Computer Application"
+        }
+    ]
+}
