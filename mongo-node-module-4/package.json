@@ -13,5 +13,11 @@
     "ejs"
   ],
   "author": "rudresh sisodiya",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "mongoclient": "^1.0.3",
+    "mongodb": "^2.2.33"
+  }
 }
