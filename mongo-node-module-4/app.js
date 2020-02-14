@@ -23,6 +23,29 @@ app.post('/getregister',(req,res)=>{
 
 })
 
+app.post('/login',(req,res)=>{
+    
+    user.find({"name":req.body.email},(err,record)=>{
+        if(err){
+            console.log("error while logging in")
+        }
+        else if(record == null){
+            console.log("no user found");
+            res.json({"Message":"no user found","status":401})
+        }
+        else if(record[0].password != req.body.pwd){
+            console.log('Something wrong');
+            res.json({"message":"user not found","status":401})
+            console.log(record.password)
+            console.log(req.body.pwd)
+        }
+        else{
+            res.json({"message":"user find","status":200})
+        }
+    })
+
+})
+
 app.post('/register',(req,res)=>{
 
     var username=req.body.email;
