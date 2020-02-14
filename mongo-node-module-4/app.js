@@ -12,5 +12,7 @@ app.get('/',(req,res)=>{
 
 app.post('/register',(req,res)=>{
 
-    
+    var username=req.body.email;
+    var password=req.body.pwd;
+
 })
