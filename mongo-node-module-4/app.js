@@ -45,9 +45,12 @@ app.post('/login',(req,res)=>{
     })
 
 })
+//here we are passing one id in this get method using postman
+//we can also do the same operation on advance lavel
+app.get('/user/:userID',(req,res)=>{
 
-app.get('/user',(req,res)=>{
-
+    var userID=req.param.userID;
+    console.log('*************',userID)
     user.find((err,data)=>{
         res.json(data);
     })
