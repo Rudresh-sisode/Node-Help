@@ -49,8 +49,8 @@ app.post('/login',(req,res)=>{
 //we can also do the same operation on advance lavel
 app.get('/user/:userID',(req,res)=>{
 
-    var userID=req.param.userID;
-    console.log('*************',userID)
+    var userID=req.params.userID;
+    console.log('*************'+userID)
     user.find((err,data)=>{
         res.json(data);
     })
