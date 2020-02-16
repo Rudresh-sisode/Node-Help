@@ -46,6 +46,13 @@ app.post('/login',(req,res)=>{
 
 })
 
+app.get('/user',(req,res)=>{
+
+    user.find((err,data)=>{
+        res.json(data);
+    })
+})
+
 app.post('/register',(req,res)=>{
 
     var username=req.body.email;
