@@ -1,5 +1,15 @@
 const express=require('express')
 const router=express.Router();
+var user=require('../module/user')
+//here this userID is accessing with the help of postman
+router.get('/:userID',(req,res)=>{
+
+    var userID=req.params.userID;
+    console.log('*************'+userID)
+    user.find((err,data)=>{
+        res.json(data);
+    })
+})
 
 router.get('/register',(req,res)=>{
     res.sendFile(__dirname+'/register.html')
@@ -28,3 +38,4 @@ router.post('/register',(req,res)=>{
     })
 
 })
+module.exports=router;
