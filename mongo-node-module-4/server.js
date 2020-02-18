@@ -30,7 +30,10 @@ else res.json({"status":401,"message":"UnAthorized boss, sorry"})
     })
 
 }])
-
+/*ES6
+var person={name:"rudresh",age:"21",gender:"male"}
+var [name,age,gender]=person
+*/
 //router used for displaying only what trigger are pressing by user
 app.use('/users',userRouter);
 //this is also called middleware or tunnel
