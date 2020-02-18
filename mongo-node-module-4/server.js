@@ -33,6 +33,7 @@ else res.json({"status":401,"message":"UnAthorized boss, sorry"})
 
 //router used for displaying only what trigger are pressing by user
 app.use('/users',userRouter);
+//this is also called middleware or tunnel
 app.use('/products',productsRouter);
 app.use('/order',ordersRouter);
 
