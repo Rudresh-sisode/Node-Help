@@ -6,6 +6,7 @@ const session = require('express-session');
 
 app.use(express.static(__dirname+'/public'));
 
+
 app.use(session({secret: 'edurekaSecert'}));
 
 app.set('view engine', 'ejs');
